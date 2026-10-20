@@ -16,9 +16,7 @@
             --border: #dcdcdc;
         }
 
-        * {
-            box-sizing: border-box;
-        }
+        * { box-sizing: border-box; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -28,10 +26,7 @@
             padding: 15px;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1000px; margin: 0 auto; }
 
         .no-print-btn {
             display: block;
@@ -47,22 +42,11 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.15);
         }
 
-        .no-print-btn:hover {
-            background-color: var(--primary-dark);
-        }
+        .no-print-btn:hover { background-color: var(--primary-dark); }
 
-        h1 {
-            text-align: center;
-            color: var(--primary-dark);
-            margin: 0 0 15px 0;
-            font-size: 1.6em;
-        }
+        h1 { text-align: center; color: var(--primary-dark); margin: 0 0 15px 0; font-size: 1.6em; }
 
-        .summary-cards {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
+        .summary-cards { display: flex; gap: 15px; margin-bottom: 20px; }
 
         .card {
             flex: 1;
@@ -77,167 +61,58 @@
         }
 
         .card h2 {
-            margin-top: 0;
-            font-size: 1.15em;
-            color: var(--primary);
-            border-bottom: 2px solid var(--secondary);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            margin-top: 0; font-size: 1.15em; color: var(--primary);
+            border-bottom: 2px solid var(--secondary); padding-bottom: 5px; margin-bottom: 10px;
         }
 
-        .stat-group {
-            margin-bottom: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.88em;
-        }
-
-        .stat-label {
-            color: #555;
-        }
-
-        .stat-value {
-            font-weight: bold;
-            color: var(--primary-dark);
-        }
+        .stat-group { display: flex; justify-content: space-between; align-items: center; font-size: 0.88em; margin-bottom: 6px; }
+        .stat-label { color: #555; }
+        .stat-value { font-weight: bold; color: var(--primary-dark); }
 
         .highlight-box {
-            background-color: #e8f8f0;
-            border: 1px solid #b7e4c7;
-            border-radius: 6px;
-            padding: 8px;
-            margin-top: 8px;
-            text-align: center;
-            font-size: 0.82em;
+            background-color: #e8f8f0; border: 1px solid #b7e4c7; border-radius: 6px;
+            padding: 8px; margin-top: 8px; text-align: center; font-size: 0.82em;
         }
 
-        .highlight-box .final-date {
-            font-size: 1.1em;
-            font-weight: bold;
-            color: var(--accent);
-        }
+        .highlight-box .final-date { font-size: 1.1em; font-weight: bold; color: var(--accent); }
 
         .section-title {
-            color: var(--primary-dark);
-            border-left: 4px solid var(--primary);
-            padding-left: 8px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.15em;
+            color: var(--primary-dark); border-left: 4px solid var(--primary);
+            padding-left: 8px; margin-top: 20px; margin-bottom: 10px; font-size: 1.15em;
         }
 
         .table-responsive {
-            background: var(--card-bg);
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-            margin-bottom: 25px;
+            background: var(--card-bg); border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06); margin-bottom: 25px;
             border: 1px solid var(--border);
-            overflow: visible;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            text-align: center;
-            font-size: 0.82em;
-        }
+        table { width: 100%; border-collapse: collapse; text-align: center; font-size: 0.82em; }
+        thead { background-color: var(--primary); color: white; }
+        th, td { padding: 6px 8px; border-bottom: 1px solid #eee; }
+        tbody tr:hover { background-color: var(--secondary); }
 
-        thead {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        th, td {
-            padding: 6px 8px;
-            border-bottom: 1px solid #eee;
-        }
-
-        tbody tr:hover {
-            background-color: var(--secondary);
-        }
-
-        .badge {
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-size: 0.8em;
-            font-weight: bold;
-        }
-
+        .badge { padding: 2px 5px; border-radius: 4px; font-size: 0.8em; font-weight: bold; }
         .badge-33 { background-color: #ffe0b2; color: #e65100; }
         .badge-75 { background-color: #bbdefb; color: #0d47a1; }
         .badge-off { background-color: #c8e6c9; color: #1b5e20; }
 
-        .row-liberado {
-            background-color: #f1f8e9;
-            font-style: italic;
-            color: #555;
-        }
+        .row-liberado { background-color: #f1f8e9; font-style: italic; color: #555; }
+        .row-highlight { background-color: #fffde7; font-weight: bold; }
 
-        .row-highlight {
-            background-color: #fffde7;
-            font-weight: bold;
-        }
-
-        /* REGLAS EXCLUSIVAS PARA IMPRESIÓN DIN A4 VERTICAL */
         @media print {
-            @page {
-                size: A4 portrait;
-                margin: 8mm;
-            }
-
-            body {
-                background-color: #ffffff;
-                padding: 0;
-                color: #000;
-            }
-
-            .container {
-                width: 100%;
-                max-width: none;
-            }
-
-            .no-print-btn {
-                display: none !important;
-            }
-
-            .card, .table-responsive {
-                box-shadow: none !important;
-                border: 1px solid #aaa !important;
-            }
-
-            .summary-cards {
-                gap: 10px;
-                margin-bottom: 12px;
-            }
-
-            .card {
-                padding: 8px;
-            }
-
-            h1 {
-                font-size: 1.3em;
-                margin-bottom: 10px;
-            }
-
-            .section-title {
-                font-size: 1.05em;
-                margin-top: 12px;
-                margin-bottom: 6px;
-            }
-
-            th, td {
-                padding: 4px 5px;
-                font-size: 8pt;
-            }
-
-            .table-responsive {
-                margin-bottom: 12px;
-            }
-
-            .page-break-before {
-                page-break-before: always;
-            }
+            @page { size: A4 portrait; margin: 8mm; }
+            body { background-color: #ffffff; padding: 0; color: #000; }
+            .container { width: 100%; max-width: none; }
+            .no-print-btn { display: none !important; }
+            .card, .table-responsive { box-shadow: none !important; border: 1px solid #aaa !important; }
+            .summary-cards { gap: 10px; margin-bottom: 12px; }
+            .card { padding: 8px; }
+            h1 { font-size: 1.3em; margin-bottom: 10px; }
+            .section-title { font-size: 1.05em; margin-top: 12px; margin-bottom: 6px; }
+            th, td { padding: 4px 5px; font-size: 8pt; }
+            .table-responsive { margin-bottom: 12px; }
+            .page-break-before { page-break-before: always; }
         }
     </style>
 </head>
@@ -253,30 +128,12 @@
         <!-- CASO 1: JUAN CARLOS -->
         <div class="card">
             <h2>Prejubilación Juan Carlos</h2>
-            <div class="stat-group">
-                <span class="stat-label">Fecha de Cumpleaños:</span>
-                <span class="stat-value">02 de Mayo</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Acumuladas al 33%:</span>
-                <span class="stat-value">348,98 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Teóricas Parciales (25%):</span>
-                <span class="stat-value">809,13 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Reales a Trabajar:</span>
-                <span class="stat-value">460,15 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Días Presenciales (7,5h):</span>
-                <span class="stat-value">61,35 días</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Descuento por Vacaciones:</span>
-                <span class="stat-value">- 22,00 días</span>
-            </div>
+            <div class="stat-group"><span class="stat-label">Fecha de Cumpleaños:</span><span class="stat-value">02 de Mayo</span></div>
+            <div class="stat-group"><span class="stat-label">Bolsa Acumulada previa (33%):</span><span class="stat-value">+ 348,98 h</span></div>
+            <div class="stat-group"><span class="stat-label">Deuda Teórica Parcial (25%):</span><span class="stat-value">809,13 h</span></div>
+            <div class="stat-group"><span class="stat-label">Deuda Neta Inicial (02/05/27):</span><span class="stat-value">460,15 h</span></div>
+            <div class="stat-group"><span class="stat-label">Días Presenciales (7,5h):</span><span class="stat-value">61,35 días</span></div>
+            <div class="stat-group"><span class="stat-label">Descuento por Vacaciones/Permisos:</span><span class="stat-value">- 27,35 días</span></div>
             <div class="highlight-box">
                 <div>ÚLTIMO DÍA TRABAJO PRESENCIAL</div>
                 <div class="final-date">~ 20 de Junio de 2027</div>
@@ -286,30 +143,12 @@
         <!-- CASO 2: MANOLO -->
         <div class="card">
             <h2>Prejubilación Manolo</h2>
-            <div class="stat-group">
-                <span class="stat-label">Fecha de Cumpleaños:</span>
-                <span class="stat-value">21 de Marzo</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Acumuladas al 33%:</span>
-                <span class="stat-value">277,20 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Teóricas Parciales (25%):</span>
-                <span class="stat-value">809,13 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Horas Reales a Trabajar:</span>
-                <span class="stat-value">531,93 h</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Días Presenciales (7,5h):</span>
-                <span class="stat-value">70,92 días</span>
-            </div>
-            <div class="stat-group">
-                <span class="stat-label">Descuento por Vacaciones:</span>
-                <span class="stat-value">- 22,00 días</span>
-            </div>
+            <div class="stat-group"><span class="stat-label">Fecha de Cumpleaños:</span><span class="stat-value">21 de Marzo</span></div>
+            <div class="stat-group"><span class="stat-label">Bolsa Acumulada previa (33%):</span><span class="stat-value">+ 277,21 h</span></div>
+            <div class="stat-group"><span class="stat-label">Deuda Teórica Parcial (25%):</span><span class="stat-value">809,13 h</span></div>
+            <div class="stat-group"><span class="stat-label">Deuda Neta Inicial (21/03/27):</span><span class="stat-value">531,92 h</span></div>
+            <div class="stat-group"><span class="stat-label">Días Presenciales (7,5h):</span><span class="stat-value">70,92 días</span></div>
+            <div class="stat-group"><span class="stat-label">Descuento por Vacaciones/Permisos:</span><span class="stat-value">- 22,00 días</span></div>
             <div class="highlight-box">
                 <div>ÚLTIMO DÍA TRABAJO PRESENCIAL</div>
                 <div class="final-date">~ 28 de Mayo de 2027</div>
@@ -325,26 +164,26 @@
                 <tr>
                     <th>Mes / Año</th>
                     <th>Días JL</th>
-                    <th>% Devolución</th>
-                    <th>Horas Devueltas</th>
-                    <th>Saldo Pendiente</th>
+                    <th>Régimen</th>
+                    <th>Horas Mensuales (Ganadas / Amortizadas)</th>
+                    <th>Deuda Neta Pendiente</th>
                     <th>Estado / Observaciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Octubre 2026</td><td>18</td><td><span class="badge badge-33">33%</span></td><td>44,55 h</td><td>+44,55 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Noviembre 2026</td><td>21</td><td><span class="badge badge-33">33%</span></td><td>51,98 h</td><td>+96,53 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Diciembre 2026</td><td>20</td><td><span class="badge badge-33">33%</span></td><td>49,50 h</td><td>+146,03 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Enero 2027</td><td>18</td><td><span class="badge badge-33">33%</span></td><td>44,55 h</td><td>+190,58 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Febrero 2027</td><td>20</td><td><span class="badge badge-33">33%</span></td><td>49,50 h</td><td>+240,08 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Marzo 2027</td><td>22</td><td><span class="badge badge-33">33%</span></td><td>54,45 h</td><td>+294,53 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Abril 2027</td><td>22</td><td><span class="badge badge-33">33%</span></td><td>54,45 h</td><td>+348,98 h</td><td>Bolsa total antes de los 63 años</td></tr>
-                <tr class="row-highlight"><td><b>02/05/2027</b></td><td>-</td><td>-</td><td>-</td><td><b>460,15 h</b></td><td><b>Inicio Jubilación Parcial (Deuda: 809,13h - 348,98h favor)</b></td></tr>
-                <tr><td>Mayo 2027</td><td>20</td><td><span class="badge badge-75">75%</span></td><td>150,00 h</td><td>310,15 h</td><td>Trabajando presencial</td></tr>
-                <tr class="row-highlight"><td>Junio 2027 (hasta 20/06)</td><td>14</td><td><span class="badge badge-75">75%</span></td><td>105,00 h</td><td>205,15 h</td><td><b>Último día presencial: ~20 de Junio</b></td></tr>
-                <tr class="row-liberado"><td>Julio 2027</td><td>22</td><td><span class="badge badge-off">VAC</span></td><td>165,00 h</td><td>40,15 h</td><td>Consumiendo Vacaciones y Permisos</td></tr>
-                <tr class="row-liberado"><td>Agosto 2027</td><td>6</td><td><span class="badge badge-off">VAC</span></td><td>40,15 h</td><td>0,00 h</td><td><b>Saldo liquidado al 100%. Liberado de asistencia.</b></td></tr>
-                <tr class="row-liberado"><td>Sep 2027 - May 2029</td><td>-</td><td><span class="badge badge-off">100% OFF</span></td><td>-</td><td>0,00 h</td><td>Liberado totalmente hasta la jubilación (02/05/2029)</td></tr>
+                <tr><td>Octubre 2026</td><td>18</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 44,55 h</td><td>- 44,55 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Noviembre 2026</td><td>21</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 51,98 h</td><td>- 96,53 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Diciembre 2026</td><td>20</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 49,50 h</td><td>- 146,03 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Enero 2027</td><td>18</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 44,55 h</td><td>- 190,58 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Febrero 2027</td><td>20</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 49,50 h</td><td>- 240,08 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Marzo 2027</td><td>22</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 54,45 h</td><td>- 294,53 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Abril 2027</td><td>22</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 54,45 h</td><td>- 348,98 h</td><td>Bolsa a favor acumulada</td></tr>
+                <tr class="row-highlight"><td><b>02/05/2027</b></td><td>-</td><td>-</td><td>-</td><td><b>460,15 h</b></td><td><b>Inicio Jub. Parcial (Deuda total 809,13h - 348,98h favor)</b></td></tr>
+                <tr><td>Mayo 2027</td><td>20</td><td><span class="badge badge-75">Presencial</span></td><td>- 150,00 h</td><td>310,15 h</td><td>Trabajo presencial (20 días x 7,5h)</td></tr>
+                <tr class="row-highlight"><td>Junio 2027 (hasta 20/06)</td><td>14</td><td><span class="badge badge-75">Presencial</span></td><td>- 105,00 h</td><td>205,15 h</td><td><b>Último día presencial: ~20 de Junio (14 días x 7,5h)</b></td></tr>
+                <tr class="row-liberado"><td>Julio 2027</td><td>22</td><td><span class="badge badge-off">VAC / AP</span></td><td>- 165,00 h</td><td>40,15 h</td><td>Amortizando con Vacaciones/Permisos (22 días)</td></tr>
+                <tr class="row-liberado"><td>Agosto 2027</td><td>5.35</td><td><span class="badge badge-off">VAC / AP</span></td><td>- 40,15 h</td><td>0,00 h</td><td><b>Deuda liquidada al 100%. Liberado de asistencia.</b></td></tr>
+                <tr class="row-liberado"><td>Sep 2027 - May 2029</td><td>-</td><td><span class="badge badge-off">100% OFF</span></td><td>0,00 h</td><td>0,00 h</td><td>Liberado totalmente hasta la jubilación (02/05/2029)</td></tr>
             </tbody>
         </table>
     </div>
@@ -357,25 +196,25 @@
                 <tr>
                     <th>Mes / Año</th>
                     <th>Días JL</th>
-                    <th>% Devolución</th>
-                    <th>Horas Devueltas</th>
-                    <th>Saldo Pendiente</th>
+                    <th>Régimen</th>
+                    <th>Horas Mensuales (Ganadas / Amortizadas)</th>
+                    <th>Deuda Neta Pendiente</th>
                     <th>Estado / Observaciones</th>
                 </tr>
             </thead>
             <tbody>
-                <tr><td>Octubre 2026</td><td>18</td><td><span class="badge badge-33">33%</span></td><td>44,55 h</td><td>+44,55 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Noviembre 2026</td><td>21</td><td><span class="badge badge-33">33%</span></td><td>51,98 h</td><td>+96,53 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Diciembre 2026</td><td>20</td><td><span class="badge badge-33">33%</span></td><td>49,50 h</td><td>+146,03 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Enero 2027</td><td>18</td><td><span class="badge badge-33">33%</span></td><td>44,55 h</td><td>+190,58 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Febrero 2027</td><td>20</td><td><span class="badge badge-33">33%</span></td><td>49,50 h</td><td>+240,08 h</td><td>Acumulando bolsa de horas</td></tr>
-                <tr><td>Marzo 2027 (hasta 21/03)</td><td>15</td><td><span class="badge badge-33">33%</span></td><td>37,13 h</td><td>+277,21 h</td><td>Bolsa acumulada antes de cumplir 63 años</td></tr>
-                <tr class="row-highlight"><td><b>21/03/2027</b></td><td>-</td><td>-</td><td>-</td><td><b>531,92 h</b></td><td><b>Inicio Jubilación Parcial (Deuda: 809,13h - 277,21h favor)</b></td></tr>
-                <tr><td>Marzo 2027 (desde 22/03)</td><td>7</td><td><span class="badge badge-75">75%</span></td><td>52,50 h</td><td>479,42 h</td><td>Trabajando presencial</td></tr>
-                <tr><td>Abril 2027</td><td>22</td><td><span class="badge badge-75">75%</span></td><td>165,00 h</td><td>314,42 h</td><td>Trabajando presencial</td></tr>
-                <tr class="row-highlight"><td>Mayo 2027 (hasta 28/05)</td><td>19.92</td><td><span class="badge badge-75">75%</span></td><td>149,42 h</td><td>165,00 h</td><td><b>Último día presencial: ~28 de Mayo</b></td></tr>
-                <tr class="row-liberado"><td>Junio 2027</td><td>22</td><td><span class="badge badge-off">VAC</span></td><td>165,00 h</td><td>0,00 h</td><td><b>Liquidación total de horas con Vacaciones/Permisos</b></td></tr>
-                <tr class="row-liberado"><td>Jul 2027 - Mar 2029</td><td>-</td><td><span class="badge badge-off">100% OFF</span></td><td>-</td><td>0,00 h</td><td>Liberado totalmente hasta la jubilación (21/03/2029)</td></tr>
+                <tr><td>Octubre 2026</td><td>18</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 44,55 h</td><td>- 44,55 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Noviembre 2026</td><td>21</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 51,98 h</td><td>- 96,53 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Diciembre 2026</td><td>20</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 49,50 h</td><td>- 146,03 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Enero 2027</td><td>18</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 44,55 h</td><td>- 190,58 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Febrero 2027</td><td>20</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 49,50 h</td><td>- 240,08 h</td><td>Generando bolsa a favor</td></tr>
+                <tr><td>Marzo 2027 (hasta 21/03)</td><td>15</td><td><span class="badge badge-33">100% (+33%)</span></td><td>+ 37,13 h</td><td>- 277,21 h</td><td>Bolsa a favor acumulada al cumplir 63 años</td></tr>
+                <tr class="row-highlight"><td><b>21/03/2027</b></td><td>-</td><td>-</td><td>-</td><td><b>531,92 h</b></td><td><b>Inicio Jub. Parcial (Deuda total 809,13h - 277,21h favor)</b></td></tr>
+                <tr><td>Marzo 2027 (desde 22/03)</td><td>7</td><td><span class="badge badge-75">Presencial</span></td><td>- 52,50 h</td><td>479,42 h</td><td>Trabajo presencial (7 días x 7,5h)</td></tr>
+                <tr><td>Abril 2027</td><td>22</td><td><span class="badge badge-75">Presencial</span></td><td>- 165,00 h</td><td>314,42 h</td><td>Trabajo presencial (22 días x 7,5h)</td></tr>
+                <tr class="row-highlight"><td>Mayo 2027 (hasta 28/05)</td><td>19.92</td><td><span class="badge badge-75">Presencial</span></td><td>- 149,42 h</td><td>165,00 h</td><td><b>Último día presencial: ~28 de Mayo</b></td></tr>
+                <tr class="row-liberado"><td>Junio 2027</td><td>22</td><td><span class="badge badge-off">VAC / AP</span></td><td>- 165,00 h</td><td>0,00 h</td><td><b>Deuda liquidada con Vacaciones/Permisos (22 días)</b></td></tr>
+                <tr class="row-liberado"><td>Jul 2027 - Mar 2029</td><td>-</td><td><span class="badge badge-off">100% OFF</span></td><td>0,00 h</td><td>0,00 h</td><td>Liberado totalmente hasta la jubilación (21/03/2029)</td></tr>
             </tbody>
         </table>
     </div>
